@@ -15,7 +15,7 @@ const Users = () => {
     }, []);
 
     const getUsers = () => {
-        Axios.get('https://bug-free-winner-vj57j65jpvrhw9x5-3001.app.github.dev/api/users')
+        Axios.get('https://user-management-system-backend-2ld2.onrender.com/api/users')
             .then(response => {
                 setUsers(response.data?.response || []);
             })
@@ -32,7 +32,7 @@ const Users = () => {
             name: data.name
         };
 
-        Axios.post('https://bug-free-winner-vj57j65jpvrhw9x5-3001.app.github.dev/api/createuser', payload)
+        Axios.post('https://user-management-system-backend-2ld2.onrender.com/api/createuser', payload)
             .then(response => {
                 getUsers();
                 setSubmitted(false);
@@ -50,7 +50,7 @@ const Users = () => {
             name: data.name
         };
 
-        Axios.post('https://bug-free-winner-vj57j65jpvrhw9x5-3001.app.github.dev/api/updateuser', payload)
+        Axios.post('https://user-management-system-backend-2ld2.onrender.com/api/updateuser', payload)
             .then(response => {
                 getUsers();
                 setSubmitted(false);
@@ -61,7 +61,7 @@ const Users = () => {
     }
 
     const deleteUser = (data) => {
-        Axios.post('https://bug-free-winner-vj57j65jpvrhw9x5-3001.app.github.dev/api/deleteuser', data)
+        Axios.post('https://user-management-system-backend-2ld2.onrender.com/api/deleteuser', data)
             .then(() => {
                 getUsers();
             })

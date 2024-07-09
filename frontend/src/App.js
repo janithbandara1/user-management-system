@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to ABC</h1>
+        <h1>Welcome to UMS</h1>
         <button className='users-button' onClick={() => navigate('/users')}>Users</button>
       </header>
     </div>
